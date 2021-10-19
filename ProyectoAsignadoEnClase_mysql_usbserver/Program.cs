@@ -16,7 +16,7 @@ namespace ProyectoAsignadoEnClase_mysql_usbserver
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrincipal());
+            Application.Run(new FormContacto());
         }
     }
 }

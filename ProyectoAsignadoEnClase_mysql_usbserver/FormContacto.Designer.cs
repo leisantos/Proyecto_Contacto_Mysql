@@ -1,4 +1,5 @@
 ﻿
+
 namespace ProyectoAsignadoEnClase_mysql_usbserver
 {
     partial class FormContacto
@@ -29,44 +30,39 @@ namespace ProyectoAsignadoEnClase_mysql_usbserver
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtcontactoId = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.txtnumeroTelefono = new System.Windows.Forms.TextBox();
             this.txtdireccion = new System.Windows.Forms.TextBox();
             this.dgContacto = new System.Windows.Forms.DataGridView();
+            this.actions = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.delete = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.txtcontactoId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgContacto)).BeginInit();
+            this.actions.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 28);
+            this.label1.Location = new System.Drawing.Point(86, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(401, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Formulario de Contacto";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 98);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ID Contacto:";
             // 
             // label3
             // 
@@ -112,15 +108,6 @@ namespace ProyectoAsignadoEnClase_mysql_usbserver
             this.label6.TabIndex = 5;
             this.label6.Text = "Direccion:";
             // 
-            // txtcontactoId
-            // 
-            this.txtcontactoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontactoId.Location = new System.Drawing.Point(158, 95);
-            this.txtcontactoId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtcontactoId.Name = "txtcontactoId";
-            this.txtcontactoId.Size = new System.Drawing.Size(310, 26);
-            this.txtcontactoId.TabIndex = 6;
-            // 
             // txtnombre
             // 
             this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,43 +147,105 @@ namespace ProyectoAsignadoEnClase_mysql_usbserver
             // dgContacto
             // 
             this.dgContacto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgContacto.Location = new System.Drawing.Point(33, 425);
+            this.dgContacto.ContextMenuStrip = this.actions;
+            this.dgContacto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgContacto.Location = new System.Drawing.Point(26, 425);
             this.dgContacto.Margin = new System.Windows.Forms.Padding(2);
             this.dgContacto.Name = "dgContacto";
             this.dgContacto.RowHeadersWidth = 51;
             this.dgContacto.RowTemplate.Height = 24;
-            this.dgContacto.Size = new System.Drawing.Size(460, 173);
+            this.dgContacto.Size = new System.Drawing.Size(473, 173);
             this.dgContacto.TabIndex = 11;
+            // 
+            // actions
+            // 
+            this.actions.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.actions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.edit,
+            this.delete});
+            this.actions.Name = "actions";
+            this.actions.Size = new System.Drawing.Size(118, 48);
+            // 
+            // edit
+            // 
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(117, 22);
+            this.edit.Text = "Editar";
+            this.edit.Click += new System.EventHandler(this.edit_Click);
+            // 
+            // delete
+            // 
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(117, 22);
+            this.delete.Text = "Eliminar";
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(142, 372);
+            this.btnAgregar.Location = new System.Drawing.Point(93, 374);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(105, 34);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnSalir
             // 
+            this.btnSalir.BackColor = System.Drawing.Color.DimGray;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(332, 372);
+            this.btnSalir.Location = new System.Drawing.Point(240, 374);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(62, 34);
             this.btnSalir.TabIndex = 13;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.MediumOrchid;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(341, 374);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(105, 34);
+            this.btnEditar.TabIndex = 15;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // txtcontactoId
+            // 
+            this.txtcontactoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcontactoId.Location = new System.Drawing.Point(158, 95);
+            this.txtcontactoId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcontactoId.Name = "txtcontactoId";
+            this.txtcontactoId.Size = new System.Drawing.Size(113, 26);
+            this.txtcontactoId.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(43, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "ID Contacto:";
             // 
             // FormContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(520, 609);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgContacto);
@@ -217,6 +266,7 @@ namespace ProyectoAsignadoEnClase_mysql_usbserver
             this.Text = "Contacto";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgContacto)).EndInit();
+            this.actions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,12 +275,10 @@ namespace ProyectoAsignadoEnClase_mysql_usbserver
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtcontactoId;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.TextBox txtnumeroTelefono;
@@ -238,7 +286,13 @@ namespace ProyectoAsignadoEnClase_mysql_usbserver
         private System.Windows.Forms.DataGridView dgContacto;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ContextMenuStrip actions;
+        private System.Windows.Forms.ToolStripMenuItem edit;
+        private System.Windows.Forms.ToolStripMenuItem delete;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.TextBox txtcontactoId;
+        private System.Windows.Forms.Label label2;
     }
-    }
- 
+}
+
 
