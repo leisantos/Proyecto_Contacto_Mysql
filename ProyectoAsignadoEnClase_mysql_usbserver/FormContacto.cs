@@ -173,7 +173,7 @@ namespace ProyectoAsignadoEnClase_mysql_usbserver
             }
             else
             {
-
+                contacto.idContacto = Convert.ToInt32(txtcontactoId.Text);
                 contacto.nombreContacto = txtnombre.Text;
                 contacto.apellidoContacto = txtapellido.Text;
                 contacto.telefonoContacto = txtnumeroTelefono.Text;
