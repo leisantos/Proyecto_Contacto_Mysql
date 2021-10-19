@@ -62,8 +62,8 @@ namespace ProyectoAsignadoEnClase_mysql_usbserver
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            txtcontactoId.ReadOnly = true;
+            label2.Visible = false;
+            txtcontactoId.Visible = false;
             txtcontactoId.Enabled = false;
             txtnombre.Focus();
 
